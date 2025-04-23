@@ -1,16 +1,24 @@
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import api from '../API/index.js';
 const { getPlayers } = api;
 
-const PlayerList = ({ players, setPlayers }) => {
+const PlayerList = ({ players, setPlayers, setSinglePlayer }) => {
+    const navigate = useNavigate();
+    const handleClick = (player) => {
+        setSinglePlayer(player);
+        navigate(`/singlePlayer/${player.id}`);
+    };
+    
+    
     useEffect(() => {
-        const getPlayerAPI = async () => {
+        const getPlayerListAPI = async () => {
             const response = await getPlayers();
             console.log(response);
             setPlayers(response.data.players);
         }
-        getPlayerAPI();
-    }, [])
+        getPlayerListAPI();
+    }, []);
 
     return (
         <div className='playerList-container'>
@@ -22,7 +30,7 @@ const PlayerList = ({ players, setPlayers }) => {
             </div>
             <div className='player-card'>
                 {players.map((player) => {
-                    const {id, name, breed, status, imageUrl, teamId} = player;
+                    const {id, name, imageUrl} = player;
                     return (
                         <div key={id}>
                             <h2>
@@ -33,12 +41,13 @@ const PlayerList = ({ players, setPlayers }) => {
                                 src={imageUrl}
                             />
                             <br />
-                            <p>
-                                {breed}
-                            </p>
-                            <p>
-                                {status}
-                            </p>
+                            <button>
+                                Favourite
+                            </button>
+                            &nbsp;
+                            <button onClick={() => handleClick(player)}>
+                                More Info
+                            </button>
                         </div>
                     )
                 })}
