@@ -101,7 +101,7 @@ function NewPlayerForm({ setRefresh, setCreateNewPlayer, createNewPlayer }){
                             [e.target.name]: e.target.value
                         }))
                     }
-                        placeholder='Paste image url here (ex: tinyurl.com'
+                        placeholder='Paste image url here (ex: tinyurl.com/puppy)'
                     />
                     </div>
                 </div>
