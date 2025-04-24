@@ -1,0 +1,43 @@
+.home-container {
+    text-align: center;
+}
+
+.searchbar-container input {
+    width: 100%;
+    max-width: 800px;
+    height: 50px;
+    border-radius: 17px;
+    border: none;
+    font-size: 2rem;
+    
+}
+
+.dropdown {
+    position: absolute;
+    top: 25%; /* pushes it below the input */
+    left: 0;
+    right: 39%;
+    color: black;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 10;
+    width: 100%;
+    max-width: 300px;
+    max-height: 200px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.dropdown:hover {
+    cursor: pointer;
+
+}
+
+.dropdown li:hover {
+    background-color: #8b5cf6;
+}  
