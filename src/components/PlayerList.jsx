@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import api from '../API/index.js';
 const { getPlayers } = api;
 
-const PlayerList = ({ players, setPlayers, setSinglePlayer }) => {
+const PlayerList = ({ players, setPlayers, setSinglePlayer, refresh }) => {
     const navigate = useNavigate();
     const handleClick = (player) => {
         setSinglePlayer(player);
@@ -18,7 +18,7 @@ const PlayerList = ({ players, setPlayers, setSinglePlayer }) => {
             setPlayers(response.data.players);
         }
         getPlayerListAPI();
-    }, []);
+    }, [refresh]);
 
     return (
         <div className='playerList-container'>
@@ -41,10 +41,6 @@ const PlayerList = ({ players, setPlayers, setSinglePlayer }) => {
                                 src={imageUrl}
                             />
                             <br />
-                            {/* <button>
-                                Favourite
-                            </button> */}
-                            {/* &nbsp; */}
                             <button onClick={() => handleClick(player)}>
                                 More Info
                             </button>

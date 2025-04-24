@@ -13,7 +13,7 @@ const Navbar = () => {
                 <Link to='/playerList'>
                     Players
                 </Link>
-                <Link>
+                <Link to='/newPlayerForm'>
                     Create New Player
                 </Link>
                 <Link>

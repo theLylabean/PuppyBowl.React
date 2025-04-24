@@ -65,7 +65,6 @@ const Home = ({ players }) => {
                     </ul>
                 )}
             </div>
-            <p>test</p>
         </div>
     )
 }
