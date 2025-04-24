@@ -41,10 +41,10 @@ const PlayerList = ({ players, setPlayers, setSinglePlayer }) => {
                                 src={imageUrl}
                             />
                             <br />
-                            <button>
+                            {/* <button>
                                 Favourite
-                            </button>
-                            &nbsp;
+                            </button> */}
+                            {/* &nbsp; */}
                             <button onClick={() => handleClick(player)}>
                                 More Info
                             </button>

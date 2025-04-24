@@ -2,20 +2,26 @@ import { useState } from 'react';
 import { Router, Routes, Route } from 'react-router-dom';
 import PlayerList from './components/PlayerList';
 import SinglePlayer from './components/SinglePlayer';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 import './css/App.css';
 
 function App() {
   const [players, setPlayers] = useState([]);
   const [singlePlayer, setSinglePlayer] = useState(null);
 
-
   return (
     <div>
+      <Navbar
+      />
       <Routes>
-        {/* <Route
+        <Route
           path='/'
-          element={ <Home /> }
-        /> */}
+          element={ <Home
+              players={players}
+            /> 
+          }
+        />
         <Route
           path='/playerList'
           element={

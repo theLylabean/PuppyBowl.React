@@ -1,0 +1,27 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grey;
+    box-shadow: 0 4px black;
+    position: sticky;
+    box-sizing: border-box;
+    color: Black;
+    border-radius: 17px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.links-container a {
+    display: inline-block;
+    margin: 0.25rem;
+    text-decoration: none;
+    background-color: #cfc9dd;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 4px rgb(61, 60, 61);
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
